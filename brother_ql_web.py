@@ -63,7 +63,7 @@ def get_label_context(request):
       'kind':          label_type_specs[d.get('label_size', "62")]['kind'],
       'margin':    int(d.get('margin', 10)),
       'threshold': int(d.get('threshold', 70)),
-      'align':         d.get('align', 'center'),
+      'align':         d.get('align', 'left'),
       'orientation':   d.get('orientation', 'standard'),
       'margin_top':    float(d.get('margin_top',    24))/100.,
       'margin_bottom': float(d.get('margin_bottom', 45))/100.,
