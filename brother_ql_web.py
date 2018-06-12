@@ -114,7 +114,7 @@ def create_label_im(text, **kwargs):
         lines.append(line)
     text = '\n'.join(lines)
     linesize = im_font.getsize(text)
-    textsize = draw.multiline_textsize(text, font=im_font)
+    textsize = draw.multiline_textsize(text, font=im_font, spacing=kwargs['font_size']//2)
     width, height = kwargs['width'], kwargs['height']
     if kwargs['orientation'] == 'standard':
         if label_type in (ENDLESS_LABEL,):
@@ -139,7 +139,7 @@ def create_label_im(text, **kwargs):
         else:
             horizontal_offset = kwargs['margin_left']
     offset = horizontal_offset, vertical_offset
-    draw.multiline_text(offset, text, (0), font=im_font, align=kwargs['align'])
+    draw.multiline_text(offset, text, (0), font=im_font, align=kwargs['align'], spacing=kwargs['font_size']//2)
     return im
 
 @get('/api/preview/text')
