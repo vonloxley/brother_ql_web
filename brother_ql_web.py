@@ -65,8 +65,8 @@ def get_label_context(request):
       'threshold': int(d.get('threshold', 70)),
       'align':         d.get('align', 'left'),
       'orientation':   d.get('orientation', 'standard'),
-      'margin_top':    float(d.get('margin_top',    24))/100.,
-      'margin_bottom': float(d.get('margin_bottom', 45))/100.,
+      'margin_top':    float(d.get('margin_top',    25))/100.,
+      'margin_bottom': float(d.get('margin_bottom', 25))/100.,
       'margin_left':   float(d.get('margin_left',   35))/100.,
       'margin_right':  float(d.get('margin_right',  35))/100.,
     }
